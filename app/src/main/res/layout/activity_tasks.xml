@@ -7,50 +7,46 @@
     tools:context=".TasksActivity">
 
 
-    <LinearLayout
-        android:id="@+id/buttons_tasks"
-        android:layout_width="match_parent"
+
+        
+    <ImageView
+        android:id="@+id/tasks_back_button"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/back_icon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <ImageView
+        android:id="@+id/tasks_add_button"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:src="@drawable/add_icon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <TextView
+        android:id="@+id/tasks_headline"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        >
-        
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/back_icon"
-            android:layout_gravity="left"/>
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@android:drawable/add_icon"
-            android:layout_gravity="right"/>
-
-    </LinearLayout>
+        android:text="משימות"
+        android:textSize="50sp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tasks_add_button"/>
 
 
-
-        
-
-        <TextView
-            android:id="@+id/tasks_headline"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="משימות"
-            android:textSize="50dp"
-            android:textColor="@color/black"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/buttons_tasks"/>
-
-    </LinearLayout>
-    
-    
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/tasks_recyclerView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/tasks_headline"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="50dp"
         />
 
 
