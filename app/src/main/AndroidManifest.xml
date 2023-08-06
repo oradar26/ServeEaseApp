@@ -13,6 +13,9 @@
         android:theme="@style/Theme.ServeEaseApp"
         tools:targetApi="31">
         <activity
+            android:name=".WaiterDashboard"
+            android:exported="false" />
+        <activity
             android:name=".TableChoiceActivity"
             android:exported="false" />
         <activity
